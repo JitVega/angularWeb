@@ -1,0 +1,94 @@
+<nav class="menu">
+  <a [routerLink]="['/willma']" [routerLinkActive]="['active']">Willma</a>
+  &nbsp;
+  <a [routerLink]="['/vestidos-de-quince']" [routerLinkActive]="['active']">Quince</a>
+  &nbsp;
+  <a [routerLink]="['/vestidos-de-novia']" [routerLinkActive]="['active']">Novia</a>
+  &nbsp;
+  <a [routerLink]="['/vestidos-de-fiesta']" [routerLinkActive]="['active']">Fiesta</a>
+  &nbsp;
+  <a [routerLink]="['/externo']" [routerLinkActive]="['active']">Externo</a>
+</nav>
+<br>
+<h2>BIENVENIDOS A LA WEB DE VILMA</h2>
+<mat-grid-list cols="3" rowHeight="1:1">
+
+  <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Vestido blanco</mat-card-title>
+          <mat-card-subtitle>vestido de quince</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/img/blanco.jpg"  alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            Un vestido de color blanco que representa la pureza y es un vestido para celebrar los 15 años
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Vestido blanco</mat-card-title>
+          <mat-card-subtitle>vestido de quince</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/img/blanco-naranja.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            Un vestido de color blanco que representa la pureza y es un vestido para celebrar los 15 años
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+  </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Vestido blanco</mat-card-title>
+          <mat-card-subtitle>vestido de quince</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/img/rosa2.jpg"  alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            Un vestido de color blanco que representa la pureza y es un vestido para celebrar los 15 años
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+  </mat-grid-tile>
+
+</mat-grid-list>
+<!-- <button (click)="redirigir()">Novia</button>
+<h4 *ngIf="nombre">El vestido de tipo: {{nombre}}</h4>
+<h4 *ngIf="color">Es de color: {{color}}</h4>
+
+<div *ngIf = "identificado; then siIdentificado else noIdentificado">
+
+</div>
+<ng-template #siIdentificado>
+	<h3>Estas identificado en esta aplicacion</h3>
+	<button (click) = "unsetIdentificado()">BorrarId</button>	
+</ng-template>
+<ng-template #noIdentificado>
+	<p>No estas identificado, pulsa este boton para identificarte</p>
+	<button (click) = "setIdentificado()">identificarse</button>
+</ng-template>
+<hr>
+<mat-checkbox>Subscribe</mat-checkbox>
+-->

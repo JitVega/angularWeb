@@ -1,0 +1,29 @@
+/*background: #F3F3F3;*/
+html{
+	margin-left: 1%;
+}
+body{
+	background: #F3F3F3;
+}
+.active{
+	color: #FF88E7;
+}
+a:link{
+	text-decoration: none;
+	font-family: Lato, sans-serif;
+	line-height: 2.5em;
+}
+.menu{
+	text-align: center;
+	color: #464646;
+}
+.title{
+	text-align: right;
+	font-weight: 300;
+	color: #464646;
+}
+
+.example-card{
+	border-radius: 20px;
+	width: 40%;
+}

@@ -1,0 +1,44 @@
+<mat-card>
+	<form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+		<mat-form-field appearance="fill">
+	    	<mat-label for="name">Usuario</mat-label>
+	    	<input matInput>
+	  	</mat-form-field>
+	 	<br>
+	  	<mat-form-field appearance="fill">
+	    	<mat-label>Password</mat-label>
+	    	<input matInput [type]="hide ? 'password' : 'text'">
+	    	<button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+	    		<mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+	    	</button>
+	  	</mat-form-field>
+
+  	</form>
+</mat-card>
+<h2>Crear usuario</h2>
+<hr>
+
+
+<div *ngIf="usuario_guardado">
+	<h2>{{usuario_guardado.name}}</h2>
+	<h2>{{usuario_guardado.job}}</h2>
+</div>
+
+<hr/>
+
+{{fecha | date:'dd/MM/yy'}}<br/>
+
+{{fecha | date:'fullDate' | uppercase}}<br/>
+{{'WELCOME TO THE JUNGLE' | lowercase}}<br/>
+{{ 4 | calculadora: 2 }} <br/>
+
+<input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()"/>
+
+<div *ngIf= "!user" >
+	Cargando...
+</div>
+<div *ngIf="user" >
+	<img src="{{user.avatar}}" width="200" />
+	<h4>{{user.first_name+ ' ' + user.last_name}}</h4>
+</div>
+
