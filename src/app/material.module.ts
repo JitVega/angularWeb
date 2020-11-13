@@ -9,9 +9,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSortModule } from '@angular/material/sort';
 
 const myModule = [
-	MatMenuModule, 
+	MatMenuModule,
 	MatSliderModule,
 	MatCheckboxModule,
 	MatTabsModule,
@@ -19,7 +21,9 @@ const myModule = [
 	MatFormFieldModule,
 	MatInputModule,
 	MatIconModule,
-	MatGridListModule
+	MatGridListModule,
+	MatButtonModule,
+	MatSortModule  
 	];
 
 @NgModule({

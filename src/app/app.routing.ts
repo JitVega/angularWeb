@@ -11,19 +11,16 @@ import { HomeWillmaComponent }		 from './home-willma/home-willma.component';
 import { ExternoComponent } 		 from './externo/externo.component';
 import { ContactoComponent }		 from './contacto/contacto.component';
 
-
-
-
 //array de rutas
 
 const appRoutes: Routes = [
 	{path: '', component: HomeWillmaComponent},
-	{path: 'willma', component: HomeWillmaComponent},
+	{path: 'vilma', component: HomeWillmaComponent},
 	{path: 'vestidos-de-quince', component: VestidosDeQuinceComponent},
 	{path: 'vestidos-de-fiesta' , component: VestidosDeFiestaComponent},
 	{path: 'vestidos-de-novia', component: VestidosDeNoviaComponent},
-	{path: 'willma/:nombre', component: HomeWillmaComponent},
-	{path: 'willma/:nombre/:color', component: HomeWillmaComponent},
+	{path: 'vilma/:nombre', component: HomeWillmaComponent},
+	{path: 'vilma/:nombre/:color', component: HomeWillmaComponent},
 	{path: 'externo', component: ExternoComponent},
 	{path: 'contacto', component: ContactoComponent},
 	{path: '**', component: HomeWillmaComponent}

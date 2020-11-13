@@ -14,7 +14,6 @@ export class VestidosService implements OnInit{
 		];
 	}
 	ngOnInit(){
-		console.log(this.vestidos);
 	}
 	public getTexto(){
 		return "Saludos desde un servicio";

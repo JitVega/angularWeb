@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routing, appRoutingProviders } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { VestidosDeQuinceComponent } from './vestidos-de-quince/vestidos-de-quince.component';
@@ -16,6 +16,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,16 +27,18 @@ import { MaterialModule } from './material.module';
     HomeWillmaComponent,
     ExternoComponent,
     CalculadoraPipe,
-    ContactoComponent
+    ContactoComponent,
+    FooterComponent
   ],
-  imports: [
-    BrowserModule,
-    routing,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MaterialModule
-  ],
+    imports: [
+        BrowserModule,
+        routing,
+        FormsModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        ReactiveFormsModule
+    ],
   providers: [
     appRoutingProviders
   ],

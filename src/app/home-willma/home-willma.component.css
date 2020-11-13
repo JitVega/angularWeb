@@ -1,0 +1,23 @@
+mat-grid-list {
+    font-family: Lato, "Helvetica Neue", sans-serif;
+}
+
+mat-card {
+    background-color: white;
+    border-radius: 40px;
+}
+
+a:link {
+    color: #464646;
+    font-size: 15px;
+}
+
+a:hover {
+    color: #FF88E7;
+}
+
+.homeText {
+    font-family: Lato, "Helvetica Neue", sans-serif;
+    font-size: 15px;
+    color: #a9a9a9;
+}

@@ -1,31 +1,54 @@
-<h2>Contacto</h2>
+﻿<h4>Contacto</h4>
 
-<form #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
+<mat-grid-list cols="5" rowHeight="1:2">
+    <mat-grid-tile>
+        <p>No encuentras un vestido que te guste? no encuentras el color ideal, o lo has encontrado pero el material no te gusta? tienes el modelo en mente pero no lo encuentras por ningun sitio? lo has encontrado pero no es de tu talla?, no te preocupes
+            Nosotros te confeccionamos el vestido que tienes en mente y a tu medida!. Contacta con nosotros.
+        </p>
+    </mat-grid-tile>
+    <mat-grid-tile>
 
-	<label for="nombre">Nombre:</label>
-	<input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre" required pattern="[a-zA-Z]+"/>
-	<span *ngIf="nombre.touched && !nombre.valid">El nombre no es valido</span>
-	<br/>
+    </mat-grid-tile>
+    <mat-grid-tile>
 
-	<label for="apellidos">Apellidos:</label>
-	<input type="text" name="apellidos" #apellidos="ngModel" [(ngModel)]="usuario.apellidos" required pattern="[a-zA-Z]+" />
-	<span *ngIf="apellidos.touched && !apellidos.valid">Los apellidos no son validos</span>
-	<br/>
+        <mat-card class="contacto-css">
+            <form #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
+                <mat-form-field appearance="fill">
+                    <mat-label for="nombre">Nombre:</mat-label>
+                    <input matInput type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre" required pattern="[a-zA-Z]+" />
+                    <span *ngIf="nombre.touched && !nombre.valid">El nombre no es valido</span>
+                </mat-form-field>
+                <br/>
+                <mat-form-field appearance="fill">
+                    <mat-label for="apellidos">Apellidos:</mat-label>
+                    <input matInput type="text" name="apellidos" #apellidos="ngModel" [(ngModel)]="usuario.apellidos" required pattern="[a-zA-Z]+" />
+                    <span *ngIf="apellidos.touched && !apellidos.valid">Los apellidos no son validos</span>
+                </mat-form-field>
+                <br/>
+                <mat-form-field appearance="fill">
+                    <mat-label for="email">Email:</mat-label>
+                    <input matInput type="text" name="email" #email="ngModel" [(ngModel)]="usuario.email" required/>
+                    <span *ngIf="email.touched && !email.valid">El email es icorrecto</span>
+                </mat-form-field>
+                <br/>
+                <mat-form-field appearance="fill">
+                    <mat-label for="telefono">Teléfono</mat-label>
+                    <input matInput type="text" name="telefono" #telefono="ngModel" [(ngModel)]="usuario.telefono" required/>
+                    <span *ngIf="telefono.touched && !telefono.valid">El telefono es incorrecto</span>
+                </mat-form-field>
+                <br/>
+                <mat-form-field appearance="fill">
+                    <mat-label for="empresa">Empresa:</mat-label>
+                    <input matInput type="text" name="empresa" #empresa="ngModel" [(ngModel)]="usuario.empresa" required pattern="[a-zA-Z]+" />
+                    <span *ngIf="empresa.touched && !empresa.valid">La empresa es icorrecto</span>
+                </mat-form-field>
+                <br/>
+                <button mat-stroked-button color="accent" type="submit" [disabled]="!formContacto.form.valid">Enviar</button>
+            </form>
+        </mat-card>
 
-	<label for="email">Email:</label>
-	<input type="text" name="email" #email="ngModel" [(ngModel)]="usuario.email" required/>
-	<span *ngIf="email.touched && !email.valid">El email es icorrecto</span>
-	<br/>
+    </mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+    <mat-grid-tile>5</mat-grid-tile>
 
-	<label for="telefono">Teléfono</label>
-	<input type="text" name="telefono" #telefono="ngModel" [(ngModel)]="usuario.telefono" required/>
-	<span *ngIf="telefono.touched && !telefono.valid">El telefono es incorrecto</span>
-	<br/>
-
-	<label for="empresa">Empresa:</label>
-	<input type="text" name="empresa" #empresa="ngModel" [(ngModel)]="usuario.empresa" required pattern="[a-zA-Z]+"/>
-	<span *ngIf="empresa.touched && !empresa.valid">La empresa es icorrecto</span>
-	<br/>
-	<input type="submit" value="Enviar" [disabled]="!formContacto.form.valid">
-
-</form>
+</mat-grid-list>

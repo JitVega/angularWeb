@@ -20,7 +20,7 @@ export class AppComponent {
 
     this.navLinks = [
     {
-      path: 'willma',
+      path: 'vilma',
       label: 'Vilma'
     },
         {

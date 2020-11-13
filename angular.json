@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "willma-web"
+  "defaultProject": "willma-web",
+  "cli": {
+    "analytics": "8790ca61-89ee-4431-a79b-fdacdf5732c9"
+  }
 }

@@ -1,21 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { VestidosService } from '../service/vestidos.service';
-import { Vestido } from '../models/vestido';
+import { Card } from '../models/card';
+import { CardsService } from '../service/cards.services';
+
 
 @Component({
   selector: 'vestidos-novia',
   templateUrl: './vestidos-de-novia.component.html',
   styleUrls: ['./vestidos-de-novia.component.css'],
-  providers: [VestidosService]
+  providers: [ CardsService ]
 })
 export class VestidosDeNoviaComponent implements OnInit {
-	public vestidos: Array<Vestido>;
+	public cardsNovia: Array<Card>;
   constructor(
-  	private _vestidoService: VestidosService
-  	) { }
+  	private _cardService: CardsService
+  	) {
+      this.cardsNovia = this._cardService.getCardsNovia();
+     }
 
   ngOnInit(): void {
-  	this.vestidos = this._vestidoService.getVestidos();
+  	
   }
 
 }

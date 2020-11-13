@@ -1,15 +1,16 @@
 <nav mat-tab-nav-bar>
-  <a mat-tab-link
-     *ngFor="let link of navLinks"
-     [routerLink]="link.path"
-     routerLinkActive #rla="routerLinkActive"
-     [active]="rla.isActive">
+    <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
     {{link.label}}
   </a>
 </nav>
+<nav class="menu">
+    <a [routerLink]="['/vilma']" [routerLinkActive]="['active']">Vilma</a> &nbsp;
+    <a [routerLink]="['/vestidos-de-quince']" [routerLinkActive]="['active']">Quince</a> &nbsp;
+    <a [routerLink]="['/vestidos-de-novia']" [routerLinkActive]="['active']">Novia</a> &nbsp;
+    <a [routerLink]="['/vestidos-de-fiesta']" [routerLinkActive]="['active']">Fiesta</a> &nbsp;
+</nav>
 
 <div>
-
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </div>
-
+<app-footer></app-footer>
